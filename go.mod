@@ -1,4 +1,4 @@
-module github.com/hayorov/helm-gcs
+module github.com/Chad-Chata/helm-gcs
 
 go 1.22.2
 

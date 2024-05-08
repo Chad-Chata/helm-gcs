@@ -1,8 +1,9 @@
 name: test
 
 on:
+  push:
   pull_request:
-    types: [synchronize]
+    branches: [ master ]
 
 jobs:
   test:
@@ -25,7 +26,7 @@ jobs:
       - name: Set up Go
         uses: actions/setup-go@v3
         with:
-          go-version: 1.20
+          go-version: 1.22
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v3
       - name: Series of tests
@@ -37,3 +38,4 @@ jobs:
           go install github.com/fzipp/gocyclo/cmd/gocyclo@latest
           /home/runner/go/bin/gocyclo -over 19 cmd pkg # forbid code with huge/complex functions
           go build cmd/helm-gcs/main.go
+
