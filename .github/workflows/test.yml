@@ -37,3 +37,4 @@ jobs:
           go install github.com/fzipp/gocyclo/cmd/gocyclo@latest
           /home/runner/go/bin/gocyclo -over 19 cmd pkg # forbid code with huge/complex functions
           go build cmd/helm-gcs/main.go
+
