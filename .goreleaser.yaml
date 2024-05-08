@@ -22,8 +22,7 @@ builds:
       - linux
       - windows
       - darwin
-  - main: ./cmd/helm-gcs/main.go
-    id: "helm-gcs-build"
+    main: ./cmd/helm-gcs/main.go
 
 archives:
   - format: tar.gz
