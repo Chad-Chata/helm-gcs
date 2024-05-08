@@ -1,8 +1,9 @@
 name: test
 
 on:
+  push:
   pull_request:
-    types: [synchronize]
+    branches: [ master ]
 
 jobs:
   test:
