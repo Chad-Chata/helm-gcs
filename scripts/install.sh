@@ -28,7 +28,7 @@ then
     arch='arm64'
 fi
 
-url="https://github.com/Chad-Chata/helm-gcs/releases/download/${version}/helm-gcs_${version}_${os}_${arch}.tar.gz"
+url="https://github.com/Chad-Chata/helm-gcs/releases/download/${version}/helm-gcs_${os}_${arch}.tar.gz"
 echo "using ${url}"
 
 filename=`echo ${url} | sed -e "s/^.*\///g"`
