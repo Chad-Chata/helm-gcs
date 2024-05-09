@@ -47,11 +47,7 @@ else
 fi
 
 # Install bin
-if ! [ rm -rf bin && mkdir bin && tar xvf $filename -C bin > /dev/null && rm -f $filename ]
-then
-    echo "failed to extract archive $filename"
-    exit -1
-fi
+rm -rf bin && mkdir bin && tar xvf $filename -C bin > /dev/null && rm -f $filename
 
 echo "helm-gcs ${version} is correctly installed."
 echo
