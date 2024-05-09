@@ -38,6 +38,7 @@ archives:
     format_overrides:
       - goos: windows
         format: zip
+    id: helm-gcs
 
 changelog:
   sort: asc
