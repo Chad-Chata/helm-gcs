@@ -23,6 +23,7 @@ builds:
       # - windows
       # - darwin
     main: ./cmd/helm-gcs/main.go
+    # id: helm-gcs
 
 archives:
   - format: tar.gz
@@ -38,7 +39,7 @@ archives:
     format_overrides:
       - goos: windows
         format: zip
-    id: helm-gcs
+    # id: helm-gcs
 
 changelog:
   sort: asc
