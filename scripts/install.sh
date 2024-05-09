@@ -29,23 +29,29 @@ then
 fi
 
 url="https://github.com/Chad-Chata/helm-gcs/releases/download/${version}/helm-gcs_${version}_${os}_${arch}.tar.gz"
+echo "using ${url}"
 
 filename=`echo ${url} | sed -e "s/^.*\///g"`
+echo "using ${filename}"
 
 # Download archive
 if [ -n "$(command -v curl)" ]
 then
-    curl -sSL -O $url
+    curl -SL -O $url
 elif [ -n "$(command -v wget)" ]
 then
-    wget -q $url
+    wget $url
 else
     echo "Need curl or wget"
     exit -1
 fi
 
 # Install bin
-rm -rf bin && mkdir bin && tar xvf $filename -C bin > /dev/null && rm -f $filename
+if ! [ rm -rf bin && mkdir bin && tar xvf $filename -C bin > /dev/null && rm -f $filename ]
+then
+    echo "failed to extract archive $filename"
+    exit -1
+fi
 
 echo "helm-gcs ${version} is correctly installed."
 echo
