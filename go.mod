@@ -1,6 +1,6 @@
 module github.com/Chad-Chata/helm-gcs
 
-go 1.22.2
+go 1.23.0
 
 require (
 	cloud.google.com/go/storage v1.40.0
@@ -8,7 +8,7 @@ require (
 	github.com/pkg/errors v0.9.1
 	github.com/sirupsen/logrus v1.9.3
 	github.com/spf13/cobra v1.8.0
-	golang.org/x/oauth2 v0.20.0
+	golang.org/x/oauth2 v0.27.0
 	google.golang.org/api v0.178.0
 	helm.sh/helm/v3 v3.14.4
 )
